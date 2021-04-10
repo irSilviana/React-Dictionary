@@ -3,14 +3,14 @@ import axios from "axios";
 
 export default function Dictionary() {
   let [keyword, setKeyword] = useState("");
-  let [data, setData] = useState(null);
+  //let [data, setData] = useState(null);
 
   function handleKeyword(e) {
     setKeyword(e.target.value.trim());
   }
 
   function handleResponse(response) {
-    setData(response.data[0]);
+    //   setData(response.data[0]);
   }
 
   function handleError(error) {
