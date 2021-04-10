@@ -25,6 +25,7 @@ Please type the correct word in English (US) 🌎`
     e.preventDefault();
     alert(`🔎 Searching for the definition of "${keyword}"`);
 
+    //Documentation: https://dictionaryapi.dev/
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
 
     axios.get(apiUrl).then(handleResponse).catch(handleError);
