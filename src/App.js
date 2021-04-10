@@ -1,12 +1,16 @@
-// import logo from './logo.svg';
+import logo from "./logo192.png";
+import Dictionary from "./components/Dictionary";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App ">
+    <div className="App">
       <div className="container">
-        <header className="App-header">Hello from React Dictionary App</header>
-        <button className="btn btn-primary">Click here</button>
+        <header>
+          <img src={logo} alt="reactlogo" className="logo" />
+          <h1>Hello from React Dictionary App</h1>
+        </header>
+        <Dictionary />
       </div>
     </div>
   );

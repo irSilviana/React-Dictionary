@@ -1,0 +1,10 @@
+.App h1 {
+  font-size: 20px;
+  display: inline;
+}
+
+.App img.logo {
+  max-width: 100px;
+  display: inline;
+  margin: 15px;
+}
