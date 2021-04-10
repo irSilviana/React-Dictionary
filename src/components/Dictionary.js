@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Result from "./Result";
 
 export default function Dictionary() {
   let [keyword, setKeyword] = useState("");
-  //let [data, setData] = useState(null);
+  let [result, setResult] = useState(null);
 
   function handleKeyword(e) {
     setKeyword(e.target.value.trim());
   }
 
   function handleResponse(response) {
-    //   setData(response.data[0]);
+    setResult(response.data[0]);
   }
 
   function handleError(error) {
@@ -41,6 +42,7 @@ Please type the correct word in English (US) 🌎`
           onChange={handleKeyword}
         />
       </form>
+      <Result result={result} />
     </div>
   );
 }
