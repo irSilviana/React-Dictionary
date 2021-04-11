@@ -1,3 +1,9 @@
+.App header,
+main,
+footer {
+  text-align: center;
+}
+
 .App h1 {
   font-size: 20px;
   display: inline;
@@ -7,4 +13,8 @@
   max-width: 100px;
   display: inline;
   margin: 15px;
+}
+.App footer {
+  font-size: 14px;
+  margin-top: 20px;
 }
