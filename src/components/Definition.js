@@ -1,9 +1,9 @@
 import React from "react";
 // import Synonym from "./Synonym";
 
-export default function MeaningDefinition(props) {
+export default function Definition(props) {
   return (
-    <div className="MeaningDefinition">
+    <div className="Definition">
       <h6>Definition</h6>
       <div>{props.definition.definition}</div>
       <div>

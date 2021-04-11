@@ -1,5 +1,5 @@
 import React from "react";
-import MeaningDefinition from "./MeaningDefinition";
+import Definition from "./Definition";
 
 export default function Meaning(props) {
   return (
@@ -8,7 +8,7 @@ export default function Meaning(props) {
       {props.meaning.definitions.map(function (definition, index) {
         return (
           <div key={index}>
-            <MeaningDefinition definition={definition} />
+            <Definition definition={definition} />
           </div>
         );
       })}
