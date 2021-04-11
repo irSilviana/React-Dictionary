@@ -41,6 +41,7 @@ Please type the correct word in English (US) 🌎`
           placeholder="Input keyword..."
           onChange={handleKeyword}
         />
+        <input type="submit" value="Search" onClick={handleSubmit} />
       </form>
       <Result result={result} />
     </div>
