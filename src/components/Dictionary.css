@@ -1,0 +1,16 @@
+.Dictionary input {
+  width: 40%;
+  border-radius: 5px;
+  border: 1px solid #a29e9e;
+  color: #888;
+}
+
+.Dictionary .hint {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.Dictionary p {
+  font-weight: 500;
+  margin-bottom: 5px;
+}

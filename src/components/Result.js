@@ -6,15 +6,17 @@ export default function Result(props) {
   if (props.result) {
     return (
       <div className="Result">
-        <h2>{props.result.word}</h2>
+        <section>
+          <h2>{props.result.word}</h2>
 
-        {props.result.phonetics.map(function (phonetic, index) {
-          return (
-            <div key={index}>
-              <Phonetic phonetic={phonetic} />
-            </div>
-          );
-        })}
+          {props.result.phonetics.map(function (phonetic, index) {
+            return (
+              <div key={index}>
+                <Phonetic phonetic={phonetic} />
+              </div>
+            );
+          })}
+        </section>
 
         {/* Looping Meaning component
         <Meaning meaning={props.result.meanings[0]} />
@@ -23,9 +25,13 @@ export default function Result(props) {
 
         {props.result.meanings.map(function (meaning, index) {
           return (
-            <div key={index}>
-              <Meaning meaning={meaning} />
-            </div>
+            <section key={index}>
+              <Meaning
+                meaning={meaning}
+                search={props.search}
+                setKeyword={props.setKeyword}
+              />
+            </section>
           );
         })}
       </div>

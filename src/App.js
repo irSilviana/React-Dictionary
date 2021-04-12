@@ -1,4 +1,4 @@
-import logo from "./logo192.png";
+import logo from "./logo.png";
 import Dictionary from "./components/Dictionary";
 import "./App.css";
 
@@ -10,8 +10,9 @@ function App() {
           <img src={logo} alt="reactlogo" className="logo" />
           <h1>React Dictionary App</h1>
         </header>
+
         <main>
-          <Dictionary />
+          <Dictionary keyword="happy" />
         </main>
         <footer>
           <small>
@@ -22,8 +23,8 @@ function App() {
               rel="noopener noreferrer"
             >
               irSilviana
-            </a>{" "}
-            and is{" "}
+            </a>
+            {", "}
             <a
               href="https://github.com/irSilviana/React-Dictionary"
               target="_blank"

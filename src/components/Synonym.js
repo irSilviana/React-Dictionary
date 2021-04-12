@@ -2,13 +2,28 @@ import React from "react";
 import "./Synonym.css";
 
 export default function Synonym(props) {
+  let search = props.search;
+  let setKeyword = props.setKeyword;
+
+  function handleClick(e) {
+    e.preventDefault();
+    setKeyword(e.target.innerHTML);
+    search(e.target.innerHTML);
+  }
+
   if (props.synonym) {
     return (
       <div className="Synonym">
-        Synonyms:
+        <span>Synonyms:</span>
         <ul>
           {props.synonym.map(function (synonym, index) {
-            return <li key={index}>{synonym}</li>;
+            return (
+              <li key={index}>
+                <a href="/" onClick={handleClick}>
+                  {synonym}
+                </a>
+              </li>
+            );
           })}
         </ul>
       </div>
