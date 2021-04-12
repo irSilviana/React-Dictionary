@@ -5,7 +5,7 @@
 .Synonym li {
   padding: 0px 6px 4px;
   margin: 2px;
-  line-height: 1;
+  line-height: 30px;
   list-style: none;
   display: inline;
   border: solid 1px #d9d7d7;
