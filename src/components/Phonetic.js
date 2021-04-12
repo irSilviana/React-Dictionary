@@ -3,8 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlayCircle } from "@fortawesome/free-solid-svg-icons";
 
 export default function Phonetic(props) {
-  console.log(props.phonetic);
-
   let audio = new Audio(props.phonetic.audio);
 
   function start() {
