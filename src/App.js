@@ -1,4 +1,4 @@
-import logo from "./logo.png";
+import logo from "./images/bibliophile.svg";
 import Dictionary from "./components/Dictionary";
 import "./App.css";
 
@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <div className="container">
         <header>
-          <img src={logo} alt="reactlogo" className="logo" />
+          <img src={logo} alt="dictioanary-logo" className="logo" />
           <h1>React Dictionary App</h1>
         </header>
 

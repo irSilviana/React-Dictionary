@@ -17,14 +17,16 @@ h6 {
 }
 
 .App h1 {
-  font-size: 20px;
-  display: inline;
+  font-size: 24px;
+  display: inline-block;
+  font-family: "Quicksand", sans-serif;
+  margin: 0 auto;
 }
 
 .App img.logo {
-  max-width: 50px;
-  display: inline;
-  margin: 50px 10px;
+  max-width: 215px;
+  display: inline-block;
+  margin: 50px auto;
 }
 
 .App footer {
