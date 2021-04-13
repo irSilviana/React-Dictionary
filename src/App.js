@@ -45,12 +45,18 @@ function App() {
               <a
                 href="https://www.google.com/chrome/"
                 target="_blank"
-                rel="noopener noreferrer "
+                rel="noopener noreferrer"
               >
                 Google Chrome
               </a>{" "}
               or{" "}
-              <a href="https://www.microsoft.com/en-us/edge">Microsoft Edge</a>{" "}
+              <a
+                href="https://www.microsoft.com/en-us/edge"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Microsoft Edge
+              </a>{" "}
               Browser 🖥)
             </p>
           </small>
