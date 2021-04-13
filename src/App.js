@@ -12,7 +12,7 @@ function App() {
         </header>
 
         <main>
-          <Dictionary keyword="happy" />
+          <Dictionary keyword="heart" />
         </main>
         <footer>
           <small>

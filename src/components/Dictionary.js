@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Result from "./Result";
+import Photos from "./Photos";
 import "./Dictionary.css";
 
 export default function Dictionary(props) {
   let [keyword, setKeyword] = useState(props.keyword);
   let [result, setResult] = useState(null);
   let [loaded, setLoaded] = useState(false);
+  let [photos, setPhotos] = useState(null);
 
   function handleKeyword(e) {
     setKeyword(e.target.value.trim());
@@ -14,6 +16,15 @@ export default function Dictionary(props) {
 
   function handleResponse(response) {
     setResult(response.data[0]);
+  }
+
+  function handleError(error) {
+    console.clear(error);
+
+    alert(
+      `😮 Sorry, we can't find the definition of "${keyword}" 
+Please type the correct word in English (US) 🌎`
+    );
   }
 
   function handleSubmit(e) {
@@ -27,21 +38,26 @@ export default function Dictionary(props) {
   }
 
   function search(keyword) {
-    //Documentation: https://dictionaryapi.dev/
+    setKeyword(keyword);
 
+    //Documentation: https://dictionaryapi.dev/
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
 
     axios.get(apiUrl).then(handleResponse).catch(handleError);
-    setKeyword(keyword);
-  }
 
-  function handleError(error) {
-    console.clear(error);
+    // Documentation Photos API: https://www.pexels.com/api/documentation/
+    let pexelsApiKey = process.env.REACT_APP_PEXELS_API_KEY;
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
+    let headers = { Authorization: `Bearer ${pexelsApiKey}` };
 
-    alert(
-      `😮 Sorry, we can't find the definition of "${keyword}" 
-Please type the correct word in English (US) 🌎`
-    );
+    axios
+      .get(pexelsApiUrl, { headers: headers })
+      .then((res) => {
+        setPhotos(res.data.photos);
+      })
+      .catch((error) => {
+        console.clear(error);
+      });
   }
 
   function quickSelection(e) {
@@ -96,6 +112,7 @@ Please type the correct word in English (US) 🌎`
       <div className="Dictionary">
         {form}
         <Result result={result} search={search} setKeyword={setKeyword} />
+        <Photos photos={photos} />
       </div>
     );
   } else {
