@@ -11,6 +11,18 @@
   margin-top: 10px;
 }
 
+.Dictionary .list ul {
+  font-size: 12px;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+}
+.Dictionary .list li {
+  list-style: none;
+  display: inline-block;
+  padding: 3px;
+}
+
 .Dictionary p {
   font-weight: 500;
   margin-bottom: 5px;

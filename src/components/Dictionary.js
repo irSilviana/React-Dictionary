@@ -44,6 +44,11 @@ Please type the correct word in English (US) 🌎`
     );
   }
 
+  function quickSelection(e) {
+    e.preventDefault();
+    search(e.target.innerHTML);
+  }
+
   let form = (
     <section>
       <p>What word do you want to look up?</p>
@@ -58,6 +63,30 @@ Please type the correct word in English (US) 🌎`
       </form>
       <div className="hint">
         Get definitions, synonyms, translations and more
+      </div>
+      <div className="list">
+        <ul>
+          <li>
+            <a href="/" onClick={quickSelection}>
+              inspiration
+            </a>
+          </li>
+          <li>
+            <a href="/" onClick={quickSelection}>
+              love
+            </a>
+          </li>
+          <li>
+            <a href="/" onClick={quickSelection}>
+              heart
+            </a>
+          </li>
+          <li>
+            <a href="/" onClick={quickSelection}>
+              traveling
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
   );
