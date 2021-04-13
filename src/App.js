@@ -16,21 +16,21 @@ function App() {
         </main>
         <footer>
           <small>
-            This project was coded by{" "}
+            With ❤ coded by{" "}
             <a
               href="https://www.linkedin.com/in/irsilviana/"
               target="_blank"
               rel="noopener noreferrer"
             >
               irSilviana
-            </a>
-            {", "}
+            </a>{" "}
+            | 2021 |{" "}
             <a
               href="https://github.com/irSilviana/React-Dictionary"
               target="_blank"
               rel="noopener noreferrer"
             >
-              open-sourced on GitHub
+              Open-sourced on GitHub
             </a>{" "}
             and hosted on{" "}
             <a
@@ -40,6 +40,19 @@ function App() {
             >
               Netlify
             </a>{" "}
+            <p>
+              (📱 Responsive App - Best view with{" "}
+              <a
+                href="https://www.google.com/chrome/"
+                target="_blank"
+                rel="noopener noreferrer "
+              >
+                Google Chrome
+              </a>{" "}
+              or{" "}
+              <a href="https://www.microsoft.com/en-us/edge">Microsoft Edge</a>{" "}
+              Browser 🖥)
+            </p>
           </small>
         </footer>
       </div>
