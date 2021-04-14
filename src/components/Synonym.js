@@ -11,7 +11,7 @@ export default function Synonym(props) {
     search(e.target.innerHTML);
   }
 
-  if (props.synonym) {
+  if (props.synonym && props.synonym.length > 0) {
     return (
       <div className="Synonym">
         <span>Synonyms:</span>

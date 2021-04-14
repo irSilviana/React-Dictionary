@@ -8,8 +8,10 @@ function App() {
     <div className="App">
       <div className="container">
         <header>
-          <img src={logo} alt="dictioanary-logo" className="logo" />
-          <h1>React Dictionary App</h1>
+          <a href="/">
+            <img src={logo} alt="dictioanary-logo" className="logo" />
+            <h1>React Dictionary App</h1>
+          </a>
         </header>
 
         <main>

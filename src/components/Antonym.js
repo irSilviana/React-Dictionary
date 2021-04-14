@@ -11,7 +11,7 @@ export default function Antonym(props) {
     search(e.target.innerHTML);
   }
 
-  if (props.antonym) {
+  if (props.antonym && props.antonym.length > 0) {
     return (
       <div className="Antonym">
         <span>Antonyms:</span>
