@@ -11,6 +11,13 @@
   padding: 5px;
 }
 
+.Dictionary .form-select {
+  width: 50%;
+  min-width: 50px;
+  display: block;
+  margin: 10px auto;
+}
+
 .Dictionary .hint {
   font-size: 12px;
   margin-top: 10px;

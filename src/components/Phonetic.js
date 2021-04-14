@@ -12,12 +12,16 @@ export default function Phonetic(props) {
 
   return (
     <div className="Phonetic">
-      <FontAwesomeIcon
-        icon={faPlayCircle}
-        className="playIcon"
-        onClick={start}
-      />{" "}
-      <div className="text">{props.phonetic.text}</div>
+      {props.phonetic.audio && (
+        <FontAwesomeIcon
+          icon={faPlayCircle}
+          className="playIcon"
+          onClick={start}
+        />
+      )}{" "}
+      {props.phonetic.text !== undefined && (
+        <div className="text">{props.phonetic.text}</div>
+      )}
     </div>
   );
 }
