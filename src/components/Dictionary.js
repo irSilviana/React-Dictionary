@@ -103,12 +103,17 @@ Please type the correct word in English (US) 🌎`
           </li>
           <li>
             <a href="/" onClick={quickSelection}>
-              heart
+              happy
             </a>
           </li>
           <li>
             <a href="/" onClick={quickSelection}>
               traveling
+            </a>
+          </li>
+          <li>
+            <a href="/" onClick={quickSelection}>
+              sunrise
             </a>
           </li>
         </ul>
