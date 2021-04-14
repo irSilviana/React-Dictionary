@@ -27,7 +27,7 @@ export default function Dictionary(props) {
   let [keyword, setKeyword] = useState(props.keyword);
   let [result, setResult] = useState(null);
   let [loaded, setLoaded] = useState(false);
-  let [photos, setPhotos] = useState(null);
+  let [photos, setPhotos] = useState([]);
 
   function handleKeyword(e) {
     setKeyword(e.target.value.trim());
