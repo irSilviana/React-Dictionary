@@ -12,10 +12,11 @@
 }
 
 .Dictionary .form-select {
-  width: 50%;
-  min-width: 50px;
+  width: 26%;
+  min-width: 150px;
   display: block;
   margin: 10px auto;
+  font-size: 12px;
 }
 
 .Dictionary .hint {
