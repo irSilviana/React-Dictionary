@@ -69,13 +69,22 @@ Please type the correct word in English (US) 🌎`
     <section>
       <p>What word do you want to look up?</p>
       <form onSubmit={handleSubmit}>
-        <input
-          type="search"
-          name="search"
-          placeholder="Search for a word..."
-          defaultValue={keyword}
-          onChange={handleKeyword}
-        />
+        <div class="input-group">
+          <input
+            type="search"
+            name="search"
+            placeholder="Search for a word..."
+            defaultValue={keyword}
+            onChange={handleKeyword}
+          />
+          <button
+            type="button"
+            className="btn btn-outline-secondary"
+            onClick={handleSubmit}
+          >
+            Search
+          </button>
+        </div>
       </form>
       <div className="hint">
         Get definitions, synonyms, translations and more
