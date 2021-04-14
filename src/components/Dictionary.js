@@ -65,6 +65,8 @@ Please type the correct word in English (US) 🌎`
     search(e.target.innerHTML);
   }
 
+  let lists = ["inspiration", "love", "happy", "traveling", "sunrise"];
+
   let form = (
     <section>
       <p>What word do you want to look up?</p>
@@ -91,31 +93,15 @@ Please type the correct word in English (US) 🌎`
       </div>
       <div className="list">
         <ul>
-          <li>
-            <a href="/" onClick={quickSelection}>
-              inspiration
-            </a>
-          </li>
-          <li>
-            <a href="/" onClick={quickSelection}>
-              love
-            </a>
-          </li>
-          <li>
-            <a href="/" onClick={quickSelection}>
-              happy
-            </a>
-          </li>
-          <li>
-            <a href="/" onClick={quickSelection}>
-              traveling
-            </a>
-          </li>
-          <li>
-            <a href="/" onClick={quickSelection}>
-              sunrise
-            </a>
-          </li>
+          {lists.map(function (list, index) {
+            return (
+              <li key={index}>
+                <a href="/" onClick={quickSelection}>
+                  {list}
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </section>
